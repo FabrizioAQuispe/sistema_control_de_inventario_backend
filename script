@@ -1,0 +1,80 @@
+CREATE DATABASE Control_Inventario;
+USE Control_Inventario;
+
+--Tabla principal de los usuarios
+CREATE TABLE Usuarios(
+id_user int primary key not null identity(1,1),
+nombre varchar(100),
+username varchar(100),
+password varchar(250),
+fecha_created datetime,
+email varchar(150),
+rol varchar(50)
+);
+
+--Tabla maestra de roles
+CREATE TABLE Roles(
+id_rol int primary key not null identity(1,1),
+nombre varchar(100)
+);
+
+--Tabla intermedia relacion muchos a muchos
+CREATE TABLE Usuarios_Roles(
+id_user int,
+id_rol int,
+PRIMARY KEY (id_user,id_rol),
+FOREIGN KEY (id_user) REFERENCES Usuarios(id_user),
+FOREIGN KEY (id_rol) REFERENCES Roles(id_rol)
+);
+
+--Tabla de Productos
+CREATE TABLE Productos(
+id_prod int primary key not null identity(1,1),
+nombre varchar(150),
+descripcion varchar(200),
+categoria varchar(100),
+referencia varchar(250)
+);
+
+--Tabla de Movimientos
+CREATE TABLE Movimientos(
+id_tipo int primary key not null identity(1,1),
+nombre varchar(50)
+);
+
+--Tabla maestra
+CREATE TABLE Mantenimiento(
+id_mant int primary key not null identity(1,1),
+id_prod int,
+id_tipo int,
+fecha_ingreso datetime,
+fecha_movimiento datetime,
+cantidad bigint,
+estado int,
+FOREIGN KEY (id_prod) REFERENCES Productos(id_prod),
+FOREIGN KEY (id_tipo) REFERENCES Movimientos(id_tipo)
+);
+
+
+INSERT INTO Productos (nombre, descripcion, categoria, referencia)
+VALUES 
+('Laptop Lenovo', 'Portátil 14" Ryzen 5', 'Tecnología', 'LEN-14R5'),
+('Mouse Logitech', 'Mouse inalámbrico', 'Accesorios', 'LOG-M185'),
+('Monitor LG', 'Monitor 24" Full HD', 'Tecnología', 'LG-24FHD');
+
+
+INSERT INTO Movimientos (nombre)
+VALUES ('Ingreso'), ('Salida');
+
+-- Ingreso de 50 Laptops
+INSERT INTO Mantenimiento(id_prod, id_tipo, fecha_ingreso,fecha_movimiento, cantidad, estado)
+VALUES (1, 1,GETDATE(),GETDATE(), 50, 1);
+
+-- Salida de 10 Laptops
+INSERT INTO Mantenimiento (id_prod, id_tipo,fecha_ingreso, fecha_movimiento, cantidad, estado)
+VALUES (1, 2, GETDATE(),GETDATE(), 10, 1);
+
+--CONSULTA PARA HACER LAS BUSQUEDAS EN LA TABLA DE MANTENIMIENTO
+SELECT P.nombre,M.cantidad,P.categoria,P.descripcion,P.referencia,M.fecha_ingreso,M.cantidad,M.estado
+FROM Mantenimiento M INNER JOIN Productos P ON P.id_prod = P.id_prod
+WHERE M.id_tipo = 2;
