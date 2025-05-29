@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HFQR\\source\\repos\\SistemaControlDeInventario\\SistemaControlDeInventario\\SistemaControlDeInventario.csproj": {}
+    "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\SistemaControlDeInventario.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HFQR\\source\\repos\\SistemaControlDeInventario\\SistemaControlDeInventario\\SistemaControlDeInventario.csproj": {
+    "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\SistemaControlDeInventario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HFQR\\source\\repos\\SistemaControlDeInventario\\SistemaControlDeInventario\\SistemaControlDeInventario.csproj",
+        "projectUniqueName": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\SistemaControlDeInventario.csproj",
         "projectName": "SistemaControlDeInventario",
-        "projectPath": "C:\\Users\\HFQR\\source\\repos\\SistemaControlDeInventario\\SistemaControlDeInventario\\SistemaControlDeInventario.csproj",
-        "packagesPath": "C:\\Users\\HFQR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HFQR\\source\\repos\\SistemaControlDeInventario\\SistemaControlDeInventario\\obj\\",
+        "projectPath": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\SistemaControlDeInventario.csproj",
+        "packagesPath": "C:\\Users\\usuario-pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HFQR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario-pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

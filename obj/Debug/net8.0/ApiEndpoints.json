@@ -1,5 +1,155 @@
 [
   {
+    "ContainingType": "SistemaControlDeInventario.Controllers.MantenimientoController",
+    "Method": "ListarNombreProducto",
+    "RelativePath": "api/Mantenimiento/buscar_nombre",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.ProductosDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.MantenimientoController",
+    "Method": "ListarMantenimiento",
+    "RelativePath": "api/Mantenimiento/buscar_seguimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.MantenimientoTableDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.MantenimientoController",
+    "Method": "CrearMantenimiento",
+    "RelativePath": "api/Mantenimiento/crear_seguimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mantenimientoInput",
+        "Type": "SistemaControlDeInventario.Models.MantenimientoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.ProductosController",
+    "Method": "CrearProductos",
+    "RelativePath": "crear_productos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productosInput",
+        "Type": "SistemaControlDeInventario.Models.ProductosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.ProductosController",
+    "Method": "EditarProductos",
+    "RelativePath": "editar_productos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productosInput",
+        "Type": "SistemaControlDeInventario.Models.ProductosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.ProductosController",
+    "Method": "DeleteProductos",
+    "RelativePath": "eliminar/{id_prod}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id_prod",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SistemaControlDeInventario.Controllers.ProductosController",
     "Method": "ListProductos",
     "RelativePath": "listar_productos",

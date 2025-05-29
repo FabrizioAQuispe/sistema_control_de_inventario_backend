@@ -12,19 +12,85 @@ namespace SistemaControlDeInventario.Service
         {
             _configuration = configuration;
         }
-        public Task<bool> CrearProductos(ProductosDTO productosInput)
+        public async Task<bool> CrearProductos(ProductosDTO productosInput)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string conn = _configuration.GetConnectionString("SQL");
+                string query = @"INSERT INTO Productos (nombre, descripcion, categoria, referencia,estado,tipo)
+                                 VALUES (@nombre, @descripcion,@categoria,@referencia,@estado,@tipo)";
+
+                SqlConnection conex = new SqlConnection(conn);
+                await conex.OpenAsync();
+
+                using (SqlCommand cmd = new SqlCommand(query,conex))
+                {
+                    cmd.Parameters.AddWithValue("@nombre",productosInput.nombre);
+                    cmd.Parameters.AddWithValue("@descripcion", productosInput.descripcion);
+                    cmd.Parameters.AddWithValue("@categoria", productosInput.categoria);
+                    cmd.Parameters.AddWithValue("@referencia", productosInput.referencia);
+                    cmd.Parameters.AddWithValue("@estado", productosInput.estado);
+                    cmd.Parameters.AddWithValue("@tipo", productosInput.tipo);
+                    
+                    await cmd.ExecuteNonQueryAsync();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ERROR SERVER RESPONSE: " + ex.Message.ToString());
+                return false;
+            }
         }
 
-        public Task<bool> DeleteProductos(int id_prod)
+        public async Task<bool> DeleteProductos(int id_prod)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string con = _configuration.GetConnectionString("SQL");
+                string query = "DELETE FROM Productos WHERE id_prod = @id_prod";
+                SqlConnection conex = new SqlConnection(con);
+                await conex.OpenAsync();
+                using (SqlCommand cmd = new SqlCommand(query, conex))
+                {
+                    cmd.Parameters.AddWithValue("@id_prod", id_prod);
+                    await cmd.ExecuteNonQueryAsync();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ERROR DELETE PRODUCTOS: " + ex.Message.ToString());
+                return false;
+            }
         }
 
-        public Task<bool> EditarProductos(ProductosDTO productosInput)
+        public async Task<bool> EditarProductos(ProductosDTO productosInput)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string conn = _configuration.GetConnectionString("SQL");
+
+                string query = @"UPDATE Productos SET nombre = @nombre,descripcion = @descripcion,categoria = @categoria,referencia = @referencia";
+
+                SqlConnection conex = new SqlConnection(conn);
+                await conex.OpenAsync();
+
+                using (SqlCommand cmd = new SqlCommand(query, conex))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", productosInput.nombre);
+                    cmd.Parameters.AddWithValue("@descripcion", productosInput.descripcion);
+                    cmd.Parameters.AddWithValue("@categoria", productosInput.categoria);
+                    cmd.Parameters.AddWithValue("@referencia", productosInput.referencia);
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ERROR EDITAR PRODUCTOS: " + ex.Message.ToString());
+            }
         }
 
         public async Task<List<ProductosDTO>> ListProductos()
@@ -41,13 +107,18 @@ namespace SistemaControlDeInventario.Service
                     SqlDataReader dr = await cmd.ExecuteReaderAsync();
                     while (await dr.ReadAsync())
                     {
+                        int idTipo = Convert.ToInt32(dr["tipo"]);
+                        string tipoIngreso = idTipo == 1 ? "Ingreso" : idTipo == 2 ? "Salida" : "Desconocido";
+
                         ProductosDTO productos = new ProductosDTO()
                         {
                             id_prod = Convert.ToInt32(dr["id_prod"].ToString()),
                             nombre = dr["nombre"].ToString(),
                             descripcion = dr["descripcion"].ToString(),
                             categoria = dr["categoria"].ToString(),
-                            referencia = dr["referencia"].ToString()
+                            referencia = dr["referencia"].ToString(),
+                            estado = dr["estado"].ToString(),
+                            tipo = tipoIngreso
                         };
                         listarProductos.Add(productos);
                     }

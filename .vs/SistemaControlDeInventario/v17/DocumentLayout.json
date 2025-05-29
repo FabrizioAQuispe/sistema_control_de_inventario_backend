@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\models\\mantenimientotabledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:models\\mantenimientotabledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\service\\imantenimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:service\\imantenimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\service\\iproductosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:service\\iproductosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\models\\productosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:models\\productosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\models\\mantenimientodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:models\\mantenimientodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MantenimientoTableDTO.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\MantenimientoTableDTO.cs",
+              "RelativeDocumentMoniker": "Models\\MantenimientoTableDTO.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\MantenimientoTableDTO.cs",
+              "RelativeToolTip": "Models\\MantenimientoTableDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T17:06:04.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductosService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\IProductosService.cs",
+              "RelativeDocumentMoniker": "Service\\IProductosService.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\IProductosService.cs",
+              "RelativeToolTip": "Service\\IProductosService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwHgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:41:44.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductosDTO.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\ProductosDTO.cs",
+              "RelativeDocumentMoniker": "Models\\ProductosDTO.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\ProductosDTO.cs",
+              "RelativeToolTip": "Models\\ProductosDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:41:18.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MantenimientoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\MantenimientoDTO.cs",
+              "RelativeDocumentMoniker": "Models\\MantenimientoDTO.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\MantenimientoDTO.cs",
+              "RelativeToolTip": "Models\\MantenimientoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T15:02:43.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IMantenimientoService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\IMantenimientoService.cs",
+              "RelativeDocumentMoniker": "Service\\IMantenimientoService.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\IMantenimientoService.cs",
+              "RelativeToolTip": "Service\\IMantenimientoService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAkwE0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T14:36:51.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
