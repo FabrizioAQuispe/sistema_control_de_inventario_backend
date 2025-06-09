@@ -54,7 +54,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "mantenimientoInput",
+        "Name": "input",
         "Type": "SistemaControlDeInventario.Models.MantenimientoDTO",
         "IsRequired": true
       }
@@ -62,6 +62,88 @@
     "ReturnTypes": [
       {
         "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.MantenimientoController",
+    "Method": "BuscarMovimientos",
+    "RelativePath": "api/Mantenimiento/filtrar_movimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "referencia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecha",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.ListaMovimientosDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.MantenimientoController",
+    "Method": "ListarMovimientos",
+    "RelativePath": "api/Mantenimiento/listar_movimientos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.ListaMovimientosDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.UsuariosController",
+    "Method": "PerfilUsuario",
+    "RelativePath": "auth/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginInput",
+        "Type": "SistemaControlDeInventario.Models.LoginInputDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.PerfilDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

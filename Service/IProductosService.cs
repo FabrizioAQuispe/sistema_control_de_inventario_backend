@@ -17,8 +17,8 @@ namespace SistemaControlDeInventario.Service
             try
             {
                 string conn = _configuration.GetConnectionString("SQL");
-                string query = @"INSERT INTO Productos (nombre, descripcion, categoria, referencia,estado,tipo)
-                                 VALUES (@nombre, @descripcion,@categoria,@referencia,@estado,@tipo)";
+                string query = @"INSERT INTO Productos (nombre, categoria,estado)
+                                 VALUES (@nombre,@categoria,@estado)";
 
                 SqlConnection conex = new SqlConnection(conn);
                 await conex.OpenAsync();
@@ -26,11 +26,8 @@ namespace SistemaControlDeInventario.Service
                 using (SqlCommand cmd = new SqlCommand(query,conex))
                 {
                     cmd.Parameters.AddWithValue("@nombre",productosInput.nombre);
-                    cmd.Parameters.AddWithValue("@descripcion", productosInput.descripcion);
                     cmd.Parameters.AddWithValue("@categoria", productosInput.categoria);
-                    cmd.Parameters.AddWithValue("@referencia", productosInput.referencia);
                     cmd.Parameters.AddWithValue("@estado", productosInput.estado);
-                    cmd.Parameters.AddWithValue("@tipo", productosInput.tipo);
                     
                     await cmd.ExecuteNonQueryAsync();
                 }
@@ -71,17 +68,17 @@ namespace SistemaControlDeInventario.Service
             {
                 string conn = _configuration.GetConnectionString("SQL");
 
-                string query = @"UPDATE Productos SET nombre = @nombre,descripcion = @descripcion,categoria = @categoria,referencia = @referencia";
+                string query = @"UPDATE Productos SET nombre = @nombre, categoria = @categoria, estado = @estado WHERE id_prod = @id_prod";
 
                 SqlConnection conex = new SqlConnection(conn);
                 await conex.OpenAsync();
 
                 using (SqlCommand cmd = new SqlCommand(query, conex))
                 {
+                    cmd.Parameters.AddWithValue("@id_prod", productosInput.id_prod);
                     cmd.Parameters.AddWithValue("@nombre", productosInput.nombre);
-                    cmd.Parameters.AddWithValue("@descripcion", productosInput.descripcion);
                     cmd.Parameters.AddWithValue("@categoria", productosInput.categoria);
-                    cmd.Parameters.AddWithValue("@referencia", productosInput.referencia);
+                    cmd.Parameters.AddWithValue("@estado", productosInput.estado);
                     await cmd.ExecuteNonQueryAsync();
                 }
 
@@ -107,18 +104,16 @@ namespace SistemaControlDeInventario.Service
                     SqlDataReader dr = await cmd.ExecuteReaderAsync();
                     while (await dr.ReadAsync())
                     {
-                        int idTipo = Convert.ToInt32(dr["tipo"]);
-                        string tipoIngreso = idTipo == 1 ? "Ingreso" : idTipo == 2 ? "Salida" : "Desconocido";
+                        //int idTipo = Convert.ToInt32(dr["tipo"]);
+                        //string tipoIngreso = idTipo == 1 ? "Ingreso" : idTipo == 2 ? "Salida" : "Desconocido";
 
                         ProductosDTO productos = new ProductosDTO()
                         {
                             id_prod = Convert.ToInt32(dr["id_prod"].ToString()),
                             nombre = dr["nombre"].ToString(),
-                            descripcion = dr["descripcion"].ToString(),
                             categoria = dr["categoria"].ToString(),
-                            referencia = dr["referencia"].ToString(),
                             estado = dr["estado"].ToString(),
-                            tipo = tipoIngreso
+                            //tipo = tipoIngreso
                         };
                         listarProductos.Add(productos);
                     }

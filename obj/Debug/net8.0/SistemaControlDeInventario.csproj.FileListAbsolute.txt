@@ -90,7 +90,6 @@ C:\Users\HFQR\source\repos\SistemaControlDeInventario\SistemaControlDeInventario
 C:\Users\HFQR\source\repos\SistemaControlDeInventario\SistemaControlDeInventario\obj\Debug\net8.0\SistemaControlDeInventario.pdb
 C:\Users\HFQR\source\repos\SistemaControlDeInventario\SistemaControlDeInventario\obj\Debug\net8.0\SistemaControlDeInventario.genruntimeconfig.cache
 C:\Users\HFQR\source\repos\SistemaControlDeInventario\SistemaControlDeInventario\obj\Debug\net8.0\ref\SistemaControlDeInventario.dll
-C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\appsettings.json
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\SistemaControlDeInventario.staticwebassets.endpoints.json
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\SistemaControlDeInventario.exe
@@ -100,6 +99,7 @@ C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\SistemaControlDeInventario.pdb
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll

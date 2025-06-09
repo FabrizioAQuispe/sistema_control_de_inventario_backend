@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaControlDeInventario.Interface;
 using SistemaControlDeInventario.Models;
@@ -15,6 +16,7 @@ namespace SistemaControlDeInventario.Controllers
             _productosService = productosService;
         }
 
+        [Authorize]
         [HttpGet]
         [Route("/listar_productos")]
         public async Task<List<ProductosDTO>> ListProductos()
@@ -29,6 +31,7 @@ namespace SistemaControlDeInventario.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         [Route("/crear_productos")]
         public async Task<bool> CrearProductos(ProductosDTO productosInput)
@@ -43,7 +46,8 @@ namespace SistemaControlDeInventario.Controllers
                 throw new Exception("ERROR HANDLE CREATE PROUDUCTOS: " + ex.Message.ToString());
             }
         }
-
+        
+        [Authorize]
         [HttpPut]
         [Route("/editar_productos")]
         public async Task<bool> EditarProductos(ProductosDTO productosInput)
@@ -58,7 +62,7 @@ namespace SistemaControlDeInventario.Controllers
                 throw new Exception("ERROR EDITAR PRODUCTOS: " + ex.Message.ToString());
             }
         }
-
+        [Authorize]
         [HttpDelete]
         [Route("/eliminar/{id_prod}")]
         public async Task<bool> DeleteProductos(int id_prod)

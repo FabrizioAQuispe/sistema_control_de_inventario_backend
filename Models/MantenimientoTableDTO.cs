@@ -7,6 +7,6 @@
         public string categoria { get; set; }
         public string referencia { get; set; }
         public string tipo { get; set; }
-        public string fecha_ingreso { get; set; }
+        public string fecha { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "SistemaControlDeInventario",
-    "version": "1.0"
+    "title": "ControlDeInventario",
+    "version": "v1"
   },
   "paths": {
     "/api/Mantenimiento/buscar_nombre": {
@@ -82,6 +82,106 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/MantenimientoTableDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mantenimiento/listar_movimientos": {
+      "get": {
+        "tags": [
+          "Mantenimiento"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaMovimientosDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaMovimientosDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaMovimientosDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mantenimiento/filtrar_movimiento": {
+      "get": {
+        "tags": [
+          "Mantenimiento"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referencia",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fecha",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaMovimientosDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaMovimientosDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaMovimientosDTO"
                   }
                 }
               }
@@ -312,6 +412,63 @@
         }
       }
     },
+    "/auth/users": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginInputDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginInputDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginInputDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PerfilDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PerfilDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PerfilDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -354,6 +511,50 @@
   },
   "components": {
     "schemas": {
+      "ListaMovimientosDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "referencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "ingresos": {
+            "type": "string",
+            "nullable": true
+          },
+          "salidas": {
+            "type": "string",
+            "nullable": true
+          },
+          "stock": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginInputDTO": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "MantenimientoDTO": {
         "type": "object",
         "properties": {
@@ -373,11 +574,7 @@
             "type": "string",
             "nullable": true
           },
-          "tipo": {
-            "type": "string",
-            "nullable": true
-          },
-          "fecha_ingreso": {
+          "fecha": {
             "type": "string",
             "format": "date-time"
           },
@@ -419,7 +616,41 @@
             "type": "string",
             "nullable": true
           },
-          "fecha_ingreso": {
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PerfilDTO": {
+        "type": "object",
+        "properties": {
+          "usuario_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre_usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre_rol": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_permiso": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
             "type": "string",
             "nullable": true
           }
@@ -437,23 +668,11 @@
             "type": "string",
             "nullable": true
           },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
           "categoria": {
             "type": "string",
             "nullable": true
           },
-          "referencia": {
-            "type": "string",
-            "nullable": true
-          },
           "estado": {
-            "type": "string",
-            "nullable": true
-          },
-          "tipo": {
             "type": "string",
             "nullable": true
           }
@@ -483,6 +702,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

@@ -1,43 +1,32 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SistemaControlDeInventario.Interface;
 using SistemaControlDeInventario.Models;
 
 namespace SistemaControlDeInventario.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class MantenimientoController : ControllerBase
+    [Authorize, Route("api/[controller]"), ApiController]
+    public class MantenimientoController(IMantenimientoInterface service) : ControllerBase
     {
-        private readonly IMantenimientoInterface _mantenimientoService;
-        public MantenimientoController(IMantenimientoInterface mantenimientoService)
-        {
-            _mantenimientoService = mantenimientoService;
-        }
         [HttpGet("buscar_nombre")]
-        public async Task<List<ProductosDTO>> ListarNombreProducto(string nombre)
-        {
-            try
-            {
-                var productos = await _mantenimientoService.ListarNombreProducto(nombre);
-                return productos;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("ERROR ListarNombreProducto: " + ex.Message.ToString());
-            }
-        }
+        public async Task<List<ProductosDTO>> ListarNombreProducto(string nombre) =>
+            await service.ListarNombreProducto(nombre);
 
         [HttpGet("buscar_seguimiento")]
-        public async Task<List<MantenimientoTableDTO>> ListarMantenimiento()
-        {
-            return await _mantenimientoService.ListarMantenimiento();
-        }
+        public async Task<List<MantenimientoTableDTO>> ListarMantenimiento() =>
+            await service.ListarMantenimiento();
+
+        [HttpGet("listar_movimientos")]
+        public async Task<List<ListaMovimientosDTO>> ListarMovimientos() =>
+            await service.ListarMovimientos();
+
+        [HttpGet("filtrar_movimiento")]
+        public async Task<List<ListaMovimientosDTO>> BuscarMovimientos(
+            [FromQuery] string? nombre, [FromQuery] string? referencia, [FromQuery] DateTime? fecha) =>
+            await service.BuscarMovimientos(nombre, referencia, fecha);
 
         [HttpPost("crear_seguimiento")]
-        public async Task<bool> CrearMantenimiento(MantenimientoDTO mantenimientoInput)
-        {
-            return await _mantenimientoService.CrearMantenimiento(mantenimientoInput);
-        }
+        public async Task<bool> CrearMantenimiento(MantenimientoDTO input) =>
+            await service.CrearMantenimiento(input);
     }
 }
