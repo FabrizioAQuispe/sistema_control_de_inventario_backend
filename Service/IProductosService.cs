@@ -36,7 +36,6 @@ namespace SistemaControlDeInventario.Service
             catch (Exception ex)
             {
                 throw new Exception("ERROR SERVER RESPONSE: " + ex.Message.ToString());
-                return false;
             }
         }
 
@@ -58,7 +57,6 @@ namespace SistemaControlDeInventario.Service
             catch (Exception ex)
             {
                 throw new Exception("ERROR DELETE PRODUCTOS: " + ex.Message.ToString());
-                return false;
             }
         }
 

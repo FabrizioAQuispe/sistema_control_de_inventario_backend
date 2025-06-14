@@ -5,7 +5,7 @@ using SistemaControlDeInventario.Models;
 
 namespace SistemaControlDeInventario.Controllers
 {
-    [Authorize, Route("api/[controller]"), ApiController]
+    [Route("api/[controller]"), ApiController]
     public class MantenimientoController(IMantenimientoInterface service) : ControllerBase
     {
         [HttpGet("buscar_nombre")]
@@ -22,11 +22,20 @@ namespace SistemaControlDeInventario.Controllers
 
         [HttpGet("filtrar_movimiento")]
         public async Task<List<ListaMovimientosDTO>> BuscarMovimientos(
-            [FromQuery] string? nombre, [FromQuery] string? referencia, [FromQuery] DateTime? fecha) =>
-            await service.BuscarMovimientos(nombre, referencia, fecha);
+            [FromQuery] string? nombre, [FromQuery] DateTime? fecha_inicial, [FromQuery] DateTime? fecha_final) =>
+            await service.BuscarMovimientos(nombre, fecha_inicial, fecha_final);
 
         [HttpPost("crear_seguimiento")]
         public async Task<bool> CrearMantenimiento(MantenimientoDTO input) =>
             await service.CrearMantenimiento(input);
+
+        [HttpPut("actualizar_mantenimiento")]
+        public async Task<MantenimientoDTO> UpdaterManenimiento([FromBody] MantenimientoDTO mantenimientoInput) =>
+            await service.UpdaterManenimiento(mantenimientoInput);
+
+        [HttpDelete("eliminar_seguimiento/{id_mantenimiento}")]
+        public async Task<bool> DeleteMantenimiento(int id_mantenimiento) => 
+            await service.DeleteMantenimiento(id_mantenimiento);
+
     }
 }

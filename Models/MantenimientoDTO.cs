@@ -12,7 +12,8 @@ namespace SistemaControlDeInventario.Models
         //public string tipo { get; set; }
         public DateTime fecha { get; set; }
         public string referencia { get; set; }
-        public int cantidad { get; set; }    
+        public int cantidad { get; set; }
         public int estado { get; set; }
+        public string? usuario_master { get; set; }
     }
 }

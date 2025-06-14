@@ -5,44 +5,6 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Categorias/ListarCategorias": {
-      "get": {
-        "tags": [
-          "Categorias"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CategoriasDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CategoriasDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CategoriasDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Mantenimiento/buscar_nombre": {
       "get": {
         "tags": [
@@ -638,27 +600,9 @@
   },
   "components": {
     "schemas": {
-      "CategoriasDTO": {
-        "type": "object",
-        "properties": {
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "ListaMovimientosDTO": {
         "type": "object",
         "properties": {
-          "id_mant": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nombre": {
             "type": "string",
             "nullable": true
@@ -680,10 +624,6 @@
             "nullable": true
           },
           "stock": {
-            "type": "string",
-            "nullable": true
-          },
-          "usuario_master": {
             "type": "string",
             "nullable": true
           }
@@ -738,10 +678,6 @@
           "estado": {
             "type": "integer",
             "format": "int32"
-          },
-          "usuario_master": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -749,10 +685,6 @@
       "MantenimientoTableDTO": {
         "type": "object",
         "properties": {
-          "id_mant": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nombre": {
             "type": "string",
             "nullable": true
@@ -774,10 +706,6 @@
             "nullable": true
           },
           "fecha": {
-            "type": "string",
-            "nullable": true
-          },
-          "usuario_master": {
             "type": "string",
             "nullable": true
           }

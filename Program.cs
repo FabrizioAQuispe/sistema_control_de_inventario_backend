@@ -72,9 +72,10 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Add scoped services
+builder.Services.AddScoped<IUsuariosInterface, UsuariosService>();
 builder.Services.AddScoped<IProductosInterface, IProductosService>();
 builder.Services.AddScoped<IMantenimientoInterface, MantenimientoService>();
-builder.Services.AddScoped<IUsuariosInterface, UsuariosService>();
+builder.Services.AddScoped<ICategoriaInterface, ICategoriasService>();
 
 var app = builder.Build();
 

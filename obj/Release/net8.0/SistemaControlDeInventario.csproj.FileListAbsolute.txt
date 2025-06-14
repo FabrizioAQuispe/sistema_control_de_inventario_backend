@@ -1,3 +1,4 @@
+C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Release\net8.0\appsettings.json
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Release\net8.0\SistemaControlDeInventario.staticwebassets.endpoints.json
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Release\net8.0\SistemaControlDeInventario.exe
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Release\net8.0\SistemaControlDeInventario.deps.json
@@ -89,4 +90,3 @@ C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\obj\
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\obj\Release\net8.0\SistemaControlDeInventario.pdb
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\obj\Release\net8.0\SistemaControlDeInventario.genruntimeconfig.cache
 C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\obj\Release\net8.0\ref\SistemaControlDeInventario.dll
-C:\Users\usuario-pc\Desktop\proyectos\sistema_control_de_inventario_backend\bin\Release\net8.0\appsettings.json
