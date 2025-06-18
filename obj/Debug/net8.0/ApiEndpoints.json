@@ -20,6 +20,46 @@
     ]
   },
   {
+    "ContainingType": "SistemaControlDeInventario.Controllers.DashboardController",
+    "Method": "ListarIngresos",
+    "RelativePath": "api/Dashboard/Listar_Ingresos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.DashboardController",
+    "Method": "ListarCantidadSalidas",
+    "RelativePath": "api/Dashboard/Listar_Salidas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.DashboardController",
+    "Method": "ListarStockTotal",
+    "RelativePath": "api/Dashboard/Listar_Stock_Total",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.CantidadStockDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SistemaControlDeInventario.Controllers.MantenimientoController",
     "Method": "UpdaterManenimiento",
     "RelativePath": "api/Mantenimiento/actualizar_mantenimiento",
@@ -190,6 +230,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[SistemaControlDeInventario.Models.ListaMovimientosDTO, SistemaControlDeInventario, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaControlDeInventario.Controllers.UsuariosController",
+    "Method": "RegistrarUsuario",
+    "RelativePath": "auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "SistemaControlDeInventario.Models.RegisterUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
         "MediaTypes": [
           "text/plain",
           "application/json",

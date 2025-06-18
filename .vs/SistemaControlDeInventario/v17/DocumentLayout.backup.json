@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\service\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:service\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\interface\\icategoriainterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:interface\\icategoriainterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\service\\icategoriasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:service\\icategoriasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\models\\categoriasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:models\\categoriasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\interface\\idashboardinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|solutionrelative:interface\\idashboardinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4464620C-948B-7F75-73DA-F03C94D77297}|SistemaControlDeInventario.csproj|c:\\users\\usuario-pc\\desktop\\proyectos\\sistema_control_de_inventario_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAE0AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAE4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T15:13:11.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoriasController.cs",
-              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Controllers\\CategoriasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriasController.cs",
-              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Controllers\\CategoriasController.cs",
-              "RelativeToolTip": "Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T15:11:26.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICategoriasService.cs",
-              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\ICategoriasService.cs",
-              "RelativeDocumentMoniker": "Service\\ICategoriasService.cs",
-              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\ICategoriasService.cs",
-              "RelativeToolTip": "Service\\ICategoriasService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T14:52:38.938Z",
+              "WhenOpened": "2025-06-18T21:03:57.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ICategoriaInterface.cs",
-              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Interface\\ICategoriaInterface.cs",
-              "RelativeDocumentMoniker": "Interface\\ICategoriaInterface.cs",
-              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Interface\\ICategoriaInterface.cs",
-              "RelativeToolTip": "Interface\\ICategoriaInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwC0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T14:51:53.705Z",
+              "WhenOpened": "2025-06-18T20:52:32.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoriasDTO.cs",
-              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\CategoriasDTO.cs",
-              "RelativeDocumentMoniker": "Models\\CategoriasDTO.cs",
-              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Models\\CategoriasDTO.cs",
-              "RelativeToolTip": "Models\\CategoriasDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IDashboardInterface.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Interface\\IDashboardInterface.cs",
+              "RelativeDocumentMoniker": "Interface\\IDashboardInterface.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Interface\\IDashboardInterface.cs",
+              "RelativeToolTip": "Interface\\IDashboardInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T14:50:45.398Z",
+              "WhenOpened": "2025-06-18T20:14:46.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IDashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\IDashboardService.cs",
+              "RelativeDocumentMoniker": "Service\\IDashboardService.cs",
+              "ToolTip": "C:\\Users\\usuario-pc\\Desktop\\proyectos\\sistema_control_de_inventario_backend\\Service\\IDashboardService.cs",
+              "RelativeToolTip": "Service\\IDashboardService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwFoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T20:14:28.47Z",
               "EditorCaption": ""
             }
           ]

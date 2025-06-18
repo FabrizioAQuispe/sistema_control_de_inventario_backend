@@ -76,6 +76,7 @@ builder.Services.AddScoped<IUsuariosInterface, UsuariosService>();
 builder.Services.AddScoped<IProductosInterface, IProductosService>();
 builder.Services.AddScoped<IMantenimientoInterface, MantenimientoService>();
 builder.Services.AddScoped<ICategoriaInterface, ICategoriasService>();
+builder.Services.AddScoped<IDashboardInterface,IDashboardService>();
 
 var app = builder.Build();
 

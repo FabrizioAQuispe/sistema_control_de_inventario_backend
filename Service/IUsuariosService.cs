@@ -21,6 +21,7 @@ namespace SistemaControlDeInventario.Service
             _jwtConfig = new JwtConfig(configuration);
         }
 
+        //Método para logear al usuario
         public async Task<List<PerfilDTO>> PerfilUsuario(LoginInputDTO login) =>
             await ExecuteQueryAsync(
                 @"SELECT U.usuario_id, U.nombre_usuario, U.email, U.rol_id, R.nombre_rol, P.nombre_permiso 
@@ -41,6 +42,33 @@ namespace SistemaControlDeInventario.Service
                     nombre_permiso = reader.GetString("nombre_permiso"),
                     token = GenerateToken(login.email)
                 });
+
+
+        //Método para registrar a los nuevos usuarios
+        public async Task<bool> RegistrarUsuario(RegisterUserDTO user)
+        {
+            try
+            {
+                string query = @"INSERT INTO Usuarios (nombre_usuario, email, passwod, rol_id) 
+                                VALUES (@nombre_usuario, @email, @password, @rol_id)";
+                string connex = _connectionString;
+                using var connection = new SqlConnection(connex);
+                using var command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@nombre_usuario", user.nombre_usuario);
+                command.Parameters.AddWithValue("@email", user.email);
+                command.Parameters.AddWithValue("@password", user.password);
+                command.Parameters.AddWithValue("@rol_id", user.rol_id);
+                await connection.OpenAsync();
+                await command.ExecuteNonQueryAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ERROR AL REGISTRAR USUARIO: " + ex.Message);
+            }
+        }
 
         private async Task<List<T>> ExecuteQueryAsync<T>(string query, Action<SqlCommand> setupParams, Func<SqlDataReader, T> mapper)
         {

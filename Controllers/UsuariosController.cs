@@ -29,5 +29,13 @@ namespace SistemaControlDeInventario.Controllers
                 throw new Exception("ERROR SERVER API AUTH: " + ex.Message.ToString());
             }
         }
+
+        [HttpPost]
+        [Route("/auth/register")]
+        public async Task<bool> RegistrarUsuario(RegisterUserDTO user)
+        {
+            var response = await _usuariosService.RegistrarUsuario(user);
+            return response;
+        }
     }
 }
